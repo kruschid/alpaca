@@ -21,7 +21,7 @@ export declare class AlpacaClient {
     getPosition(params: GetPosition): Promise<Position>;
     getPositions(): Promise<Position[]>;
     closePosition(params: ClosePosition): Promise<Order>;
-    closePositions(params: ClosePositions): Promise<Order[]>;
+    closePositions(params: ClosePositions): Promise<OrderCancelation[]>;
     getAsset(params: GetAsset): Promise<Asset>;
     getAssets(params?: GetAssets): Promise<Asset[]>;
     getWatchlist(params: GetWatchList): Promise<Watchlist>;

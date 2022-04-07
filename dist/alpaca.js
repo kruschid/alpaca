@@ -1,5 +1,5 @@
 /*! 
- * alpaca@6.3.16
+ * alpaca@6.3.17
  * released under the permissive ISC license
  */
 
@@ -386,7 +386,7 @@ class AlpacaClient {
     closePositions(params) {
         var _a;
         return __awaiter(this, void 0, void 0, function* () {
-            return parse.orders(yield this.request({
+            return parse.canceled_orders(yield this.request({
                 method: 'DELETE',
                 url: `${urls.rest.account}/positions?cancel_orders=${JSON.stringify((_a = params.cancel_orders) !== null && _a !== void 0 ? _a : false)}`,
             }));

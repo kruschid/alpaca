@@ -107,7 +107,7 @@ export class AlpacaClient {
         }));
     }
     async closePositions(params) {
-        return parse.orders(await this.request({
+        return parse.canceled_orders(await this.request({
             method: 'DELETE',
             url: `${urls.rest.account}/positions?cancel_orders=${JSON.stringify(params.cancel_orders ?? false)}`,
         }));

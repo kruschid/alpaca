@@ -140,7 +140,7 @@ class AlpacaClient {
     closePositions(params) {
         var _a;
         return __awaiter(this, void 0, void 0, function* () {
-            return parse_js_1.default.orders(yield this.request({
+            return parse_js_1.default.canceled_orders(yield this.request({
                 method: 'DELETE',
                 url: `${urls_js_1.default.rest.account}/positions?cancel_orders=${JSON.stringify((_a = params.cancel_orders) !== null && _a !== void 0 ? _a : false)}`,
             }));

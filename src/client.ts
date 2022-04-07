@@ -211,9 +211,9 @@ export class AlpacaClient {
     );
   }
 
-  async closePositions(params: ClosePositions): Promise<Order[]> {
-    return parse.orders(
-      await this.request<RawOrder[]>({
+  async closePositions(params: ClosePositions): Promise<OrderCancelation[]> {
+    return parse.canceled_orders(
+      await this.request<RawOrderCancelation[]>({
         method: 'DELETE',
         url: `${urls.rest.account}/positions?cancel_orders=${JSON.stringify(
           params.cancel_orders ?? false,
